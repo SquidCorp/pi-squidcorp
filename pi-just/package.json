@@ -1,0 +1,29 @@
+{
+  "name": "pi-just",
+  "version": "0.1.0",
+  "description": "Pi extension that turns a project overlay catalog into /just:<recipe> commands",
+  "type": "module",
+  "keywords": ["pi-package"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SquidCorp/pi-squidcorp.git",
+    "directory": "pi-just"
+  },
+  "homepage": "https://github.com/SquidCorp/pi-squidcorp/tree/main/pi-just",
+  "bugs": {
+    "url": "https://github.com/SquidCorp/pi-squidcorp/issues"
+  },
+  "files": ["src", "README.md", "CHANGELOG.md", "LICENSE"],
+  "scripts": {
+    "test": "node --experimental-strip-types --test src/schema.test.ts src/just.test.ts src/merge.test.ts"
+  },
+  "pi": {
+    "extensions": ["./src/index.ts"],
+    "changelogPath": "./CHANGELOG.md"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  }
+}
